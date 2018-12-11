@@ -1,0 +1,161 @@
+.parallax1 {
+    background-image: url('http://cdn.mauyjesy.com/images/parallax-mau-jesy.jpg');
+}
+
+.parallax {
+    background-position-x: 0%!important;
+}
+
+#top {
+    background-position-x: 21%!important;
+}
+
+@media (max-width: 350px) {
+    .hero .mouse {
+        display: none;
+    }
+    .hero h1 {
+        font-size: 34px;
+    }
+    .hero .info .date {
+        bottom: 83px;
+        text-shadow: 1px 1px #333;
+    }
+}
+
+@media (min-width: 350px) and (max-width: 767px) {
+    .hero .mouse {
+        display: none;
+    }
+    .hero h1 {
+        font-size: 34px;
+        line-height: 32px;
+        margin: 5% 0;
+    }
+    .hero .info .date {
+        bottom: 83px;
+        text-shadow: 1px 1px #333;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1300px) {
+    .hero .mouse {
+        display: none;
+    }
+    .hero .info .date {
+        bottom: 161px;
+        font-size: 40px;
+        line-height: 46px;
+    }
+    /*.hero .info .date {
+        bottom: 183px;
+        text-shadow: 1px 1px #333;
+    }*/
+    .hero #countdown {
+        line-height: 52px;
+        font-size: 40px;
+    }
+    .hero #countdown span {
+        font-size: 32px;
+    }
+}
+
+p {
+    margin: 0 6px 25px 6px;
+    text-align: justify;
+}
+
+.parallax h2.quote {
+    text-shadow: 1px 1px #333;
+}
+
+.confirmation p {
+    text-align: center;
+    color: #fff;
+}
+
+input[type="text"],
+textarea,
+.form-control {
+    color: #000;
+    font-family: sans-serif;
+}
+
+.rsvp-container h3,
+.rsvp-container p,
+.rsvp-container .radio label {
+    color: #fff;
+}
+
+.rsvp-container h3 {
+    text-align: center;
+}
+
+.rsvp-container .nombreInvitado {
+    padding: 10px 0;
+    font-weight: bold;
+    color: #fff;
+}
+
+#radioBtn .notActive {
+    color: #3276b1;
+    background-color: #fff;
+}
+
+.unselectedRsvpBtn {
+    background: #EAE0C8;
+    color: #474347;
+    border-color: #a3a3a3;
+}
+
+.unselectedRsvpBtn:hover {
+    background: #E5C100;
+    background-image: -webkit-linear-gradient(top, #E5C100, #ccb022);
+    background-image: -moz-linear-gradient(top, #E5C100, #ccb022);
+    background-image: -ms-linear-gradient(top, #E5C100, #ccb022);
+    background-image: -o-linear-gradient(top, #E5C100, #ccb022);
+    background-image: linear-gradient(to bottom, #E5C100, #ccb022);
+    color: #fff;
+    border-color: #f2d12e;
+}
+
+.selectedRsvpBtn {
+    background: #E5C100;
+    background-image: -webkit-linear-gradient(top, #E5C100, #ccb022);
+    background-image: -moz-linear-gradient(top, #E5C100, #ccb022);
+    background-image: -ms-linear-gradient(top, #E5C100, #ccb022);
+    background-image: -o-linear-gradient(top, #E5C100, #ccb022);
+    background-image: linear-gradient(to bottom, #E5C100, #ccb022);
+    color: #fff;
+    border-color: #f2d12e;
+}
+
+.selectedRsvpBtn:hover {
+    background: #E5C100;
+    background-image: -webkit-linear-gradient(top, #E5C100, #E5C100);
+    background-image: -moz-linear-gradient(top, #E5C100, #E5C100);
+    background-image: -ms-linear-gradient(top, #E5C100, #E5C100);
+    background-image: -o-linear-gradient(top, #E5C100, #E5C100);
+    background-image: linear-gradient(to bottom, #E5C100, #E5C100);
+    color: #fff;
+    border-color: #f2d12e;
+}
+
+.small-box li {
+    /*width: 330px;
+    height: 225px;*/
+    width: 345px;
+    height: 270px;
+}
+
+.small-box li a img {
+    margin-top: 52px;
+}
+
+.small-box {
+    margin-top: 0;
+}
+
+.small-box img{
+    margin-top: 15px;
+}

@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Boda de Mau & Jesy website">
+    <meta name="keywords" content="Sitio web de bodas">
+    <!-- Title
+    ================================================== -->
+    <title>Boda de Mau & Jesy</title>
+    <!-- Google Fonts
+    ================================================== -->
+    <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="css/grid.css" media="all">
+    <link rel="stylesheet" href="css/magnific-popup.css" media="all">
+    <link rel="stylesheet" href="css/font-awesome.min.css" media="all">
+    <link rel="stylesheet" href="css/animate.min.css" media="all">
+    <link rel="stylesheet" href="css/flaticon.css" media="all">
+    <link rel="stylesheet" href="css/style.css" media="all">
+    <link id="colors" rel="stylesheet" href="css/colors/default.css" media="all">
+    <link href="bower_components/AngularJS-Toaster/toaster.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/custom.css" media="all"> -->
+    <link rel="stylesheet" href="dist/styles.min.css" media="all">
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="http://cdn.mauyjesy.com/elements/favicon.ico">
+    <link rel="apple-touch-icon" href="http://cdn.mauyjesy.com/elements/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="http://cdn.mauyjesy.com/elements/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="http://cdn.mauyjesy.com/elements/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="http://cdn.mauyjesy.com/elements/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="http://cdn.mauyjesy.com/elements/apple-touch-icon-180x180.png" />
+    <!-- Vendor
+    ================================================== -->
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
+    <script src="dist/js_scripts.min.js"></script>
+    <!-- <script src='bower_components/angular-bootstrap/ui-bootstrap.min.js'></script>
+    <script src='bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js'></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/AngularJS-Toaster/toaster.min.js"></script>
+     -->
+    <!-- Load Main jQuery Files
+    ================================================== -->
+    <!-- <script src="app/app.js"></script>
+    <script src="app/firebase.svc.js"></script>
+    <script src="app/login.ctrl.js"></script>
+    <script src="app/rsvp.ctrl.js"></script>
+    <script src="app/nuevacontrasena1.ctrl.js"></script>
+    <script src="app/nuevacontrasena2.ctrl.js"></script>
+    <script src="app/cambiarContrasena.ctrl.js"></script> -->
+    <script src="dist/app_scripts.min.js"></script>
+    
+    <!-- <script src="js/jquery.min.js"></script>
+    <script src="js/modernizr.js"></script> -->
+</head>
+
+<body ng-app="bodamauyjesy">
+    <toaster-container toaster-options="{'close-button':true}"></toaster-container>
+    <div class="loaderOverlay"><i class="fa fa-heart animate-spin"></i></div>
+    <!-- Hero Section -->
+    <div id="logo">Mau <span>&amp;</span> Jesy</div>
+    <section id="top" class="hero" data-type="parallax">
+        <header id="main-menu">
+            <div class="container">
+                <div class="row">
+                    <div id="menu-logo">M <span>&amp;</span> J</div>
+                    <nav id="navigation" class="column twelve">
+                        <ul>
+                            <li class="submenu"><a href="#logo">Inicio</a></li>
+                            <li><a href="#couple">Nuestra historia</a></li>
+                            <li><a href="#loveline">Loveline</a></li>
+                            <!-- <li><a href="#wedding-events">Events</a></li> -->
+                            <!-- <li><a href="#important-people">Personas</a></li> -->
+                            <li><a href="#wedding-gallery">Fotos</a></li>
+                            <li><a href="#gift-registry">Regalos</a></li>
+                            <li><a href="#guestbook">Decínos algo</a></li>
+                            <li><a href="#rsvp">Confirmá tu asistencia</a></li>
+                        </ul>
+                    </nav>
+                    <a href="#" id="menu-toggle-wrapper">
+                        <div id="menu-toggle"></div>
+                    </a>
+                </div>
+                <!-- close .ha-header-perspective -->
+            </div>
+            <!-- close grid container -->
+        </header>
+        <div class="overlay-dark"></div>
+        <div class="container">
+            <div class="hero-inner">
+                <h1>Decidimos presentarnos ante Dios para volvernos uno solo con Él</h1>
+                <div class="info">
+                    <div id="countdown"> 462 <span>days</span> 18 <span>hours</span> 46 <span>mins</span> 34 <span>secs</span></div>
+                    <span class="date">el domingo 21 de agosto de 2016 en La Casona de Pedregal, Belén.</span>
+                </div>
+                <a href="#couple" class="mouse scrollTo"><i class="fa fa-long-arrow-down"></i></a>
+            </div>
+        </div>
+    </section>
+    <!-- #Hero Section Ends -->
+    <section id="home-content" class="top-menu">
+        <!-- RSVP Now -->
+        <section id="invitation" class="pattern">
+            <span>Y queremos que nos acompañés en ese día tan especial</span>
+            <a id="to-rsvp" href="#rsvp" class="button scrollTo">Confirmá tu asistencia aquí</a>
+        </section>
+        <!-- #RSVP Now -->
+        <!-- Couple Images -->
+        <section id="couple">
+            <div class="overlay-dark"></div>
+            <div class="hero-heart"></div>
+            <div class="images">
+                <div class="column six girl">
+                    <span class="fname">Mauricio</span>
+                    <span class="lname">Peraza</span>
+                </div>
+                <div class="column six boy">
+                    <span class="fname">Jeslyn</span>
+                    <span class="lname">Flores</span>
+                </div>
+            </div>
+        </section>
+        <!-- #Couple Images Ends -->
+        <!-- Story Section -->
+        <section id="story" class="pattern">
+            <div class="container timeline">
+                <span class="arrow-up"></span>
+                <span class="arrow-down"></span>
+                <div class="row">
+                    <div class="column six right">
+                        <h2 class="vibe">Historia del novio</h2>
+                        <div class="story">
+                            <p>Hace 5 años, en un desayuno en la playa conocí sin imaginármelo, a quien sería la mujer de mi vida. Una muchacha guapa, simpática e inteligente llamó mi atención e hizo que ese desayuno durará más de lo normal. Cuando terminó ese fin de semana recuerdo haberme ido sin despedirme y sin tener su teléfono, pero sabía dónde encontrarla. Mis idas a la iglesia donde ella asistía se volvieron una excusa para verla y conversar con ella, sin embargo, seguía sin tener su número de teléfono (ni ella el mío... todo era parte del plan jaja).
+                            <p>Hasta que un día tuve una buena excusa para contactarla por redes sociales, luego por skype, luego hacer coincidir nuestros planes para vernos hasta poder pasar más tiempo con ella a solas. Nuestra primera cita fue de todo un día, fuimos juntos a un fiesta de Navidad para niños, luego me acompañó a comprarme un sombrero para una fiesta de sombreros que tenía en la noche (ahí mismo la invité para que me acompañara), luego un capucchino de menta que siempre recordaremos y en la noche la fiesta de sombreros. En realidad no sé cómo lo logré, pero lo hice, una mujer como ella que sólo en mis mejores sueños existía se enamoró de mí, de fijo Dios "me hizo los puntos" para que me diera pelota jaja. Y nuestra historia apenas está comenzando…</p>
+                        </div>
+                        <div class="social">
+                            <ul>
+                                <li><a target="_blank" href="https://www.facebook.com/mperazac"><i class="fa fa-facebook"></i></a>
+                                </li>
+                                <li><a target="_blank" href="https://twitter.com/perazamau"><i class="fa fa-twitter"></i></a>
+                                </li>
+                                <li><a target="_blank" href="https://www.instagram.com/mperazac"><i class="fa fa-instagram"></i></a>
+                                </li>
+                                <li><a target="_blank" href="https://cr.linkedin.com/in/mauricio-peraza-b821b129"><i class="fa fa-linkedin"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column six left">
+                        <h2 class="vibe">Historia de la novia</h2>
+                        <div class="story">
+                            <p>Siendo parte activa de mi grupo de jóvenes de la iglesia, Supernova en ese entonces, me fui muy feliz a un campamento en el que Dios tenía pensado además de llenar mis expectativas y corazón con Su amor, darme el mejor regalo: conocer al amor de mi vida. Generalmente va tanta gente a esos campas, que yo vi a Mau hasta el desayuno del domingo cuando me fui a sentar con las amigas que había hecho ese fin de semana y al acercarme Gabie le dijo: “¿ves?, ¡de ella te estaba hablando!” Yo me senté, él comió casi tan despacio como yo y hablamos y hablamos y cuando me di cuenta, sólo quedábamos nosotros en la mesa. “¿Sos psicólogo?” le dije, - ja! Quienes lo conocen notarán lo hábil que fue para que yo creyera eso! Al final del campa se fue en su propio carro y no se despidió… yo noté que no se despidió. Creo que ahí empezó todo. Después, entre noches de martes en Supernova y chats vía FB todo se fue dando hasta que 4 meses más tarde, me pidió ser su novia y yo me quedé muda de la felicidad.</p>
+                        </div>
+                        <div class="social">
+                            <ul>
+                                <li><a target="_blank" href="https://www.facebook.com/jeslyn.flores"><i class="fa fa-facebook"></i></a>
+                                </li>
+                                <li><a target="_blank" href="https://twitter.com/Shezy23"><i class="fa fa-twitter"></i></a>
+                                </li>
+                                <li><a target="_blank" href="https://www.instagram.com/shezy23"><i class="fa fa-instagram"></i></a>
+                                <li><a target="_blank" href="https://www.linkedin.com/in/jeslyn-flores-568a0755"><i class="fa fa-linkedin"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="twelve">
+                        <div class="box corner quote">
+                            <div class="corners-topleft"></div>
+                            <div class="corners-bottomleft"></div>
+                            <div class="corners-topright"></div>
+                            <div class="corners-bottomright"></div>
+                            La noche de la propuesta, Mau montó una mesita con flores, velas, vino, y lo acompañó de lamparitas guindando del árbol y música. Jesy iba con los ojos vendados durante todo el camino y hasta que Mau dijo: “Bienvenida a nuestra primera cena en nuestro futuro hogar”. Estábamos en el lote donde hoy está construido nuestro apartamento. Sirvió el vino, sacó la cajita con el anillo, hizo la pregunta más esperada de todas y de nuevo, Jesy quedó muda.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- #Story Section Ends -->
+        <!-- Loveline Section -->
+        <section id="loveline">
+            <header class="section-header">
+                <h3 class="section-title">Nuestro LOVELINE</h3>
+                <p class="section-tagline">Un resumen de esta historia que apenas comienza</p>
+            </header>
+            <div class="container timeline">
+                <span class="arrow-up"></span>
+                <span class="arrow-down"></span>
+                <div class="row">
+                    <div class="timeline-year start"><span>2010</span></div>
+                    <div class="column six heart right">
+                        <div class="box pattern">
+                            <span class="date">Noviembre</span>
+                            <h2>La primera cita</h2>
+                            <div class="box-content">
+                                <div class="">
+                                    <img src="http://cdn.mauyjesy.com/timeline/10.12.3-1era-cita-Anonos3.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column six heart left movetop">
+                        <div class="box pattern">
+                            <span class="date">Diciembre</span>
+                            <h2>Primer viaje a la playa</h2>
+                            <div class="box-content">
+                                <div class="">
+                                    <img src="http://cdn.mauyjesy.com/timeline/10.12.4-dic-1er-viaje-a-la-playa.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="timeline-year"><span>2011</span></div>
+                    <div class="column six heart right">
+                        <div class="box pattern">
+                            <span class="date">Enero</span>
+                            <h2>Declaración de "me gustas"</h2>
+                            <div class="box-content">
+                                <div class="">
+                                    <img src="http://cdn.mauyjesy.com/timeline/11.1-Declaracion-me-gustas.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column six heart left">
+                        <div class="box pattern">
+                            <span class="date">Enero</span>
+                            <h2>Primer cumple de Jesy juntos</h2>
+                            <div class="box-content">
+                                <div class="">
+                                    <img src="http://cdn.mauyjesy.com/timeline/11.1-1er-cumple-juntos.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column six heart right">
+                        <div class="box pattern">
+                            <span class="date">Junio</span>
+                            <h2>Primer campa como novios</h2>
+                            <div class="box-content">
+                                <div class="">
+                                    <img src="http://cdn.mauyjesy.com/timeline/11.6-1er-campa-como-novios.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column six heart left movetop">
+                        <div class="box pattern">
+                            <span class="date">Octubre</span>
+                            <h2>Amor de cuatro</h2>
+                            <div class="box-content">
+                                <div class="">
+                                    <img src="http://cdn.mauyjesy.com/timeline/11.10-amor-de-4.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column six heart right">
+                        <div class="box pattern">
+                            <span class="date">Diciembre</span>
+                            <h2>Primer viaje misionero a Nicaragua</h2>
+                            <div class="box-content">
+                                <div class="">
+                                    <img src="http://cdn.mauyjesy.com/timeline/11.12.1-1er-viaje-misionero-juntos.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="timeline-year"><span>2012</span></div>
+                    <div class="column six heart right">
+                        <div class="box pattern">
+                            <span class="date">Enero</span>
+                            <h2>Primer viaje juntos</h2>
+                            <div class="box-content">
+                                <div class="">
+                                    <img src="http://cdn.mauyjesy.com/timeline/12.1-1er-viaje-juntos.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column six heart left movetop">
+                        <div class="box pattern">
+                            <span class="date">Diciembre</span>
+                            <h2>Segundo viaje misionero a Nicaragua</h2>
+                            <div class="box-content">
+                                <div class="">
+                                    <img src="http://cdn.mauyjesy.com/timeline/12.12-2ndo-viaje-misionero-juntos.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="timeline-year"><span>2013</span></div>
+                    <div class="column six heart right">
+                        <div class="box pattern">
+                            <span class="date">Abril</span>
+                            <h2>Dos años juntos</h2>
+                            <div class="box-content">
+                                <div class="">
+                                    <img src="http://cdn.mauyjesy.com/timeline/13.3-2-anos.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column six heart left movetop">
+                        <div class="box pattern">
+                            <span class="date">Diciembre</span>
+                            <h2>Tercer viaje misionero a Nicaragua</h2>
+                            <div class="box-content">
+                                <div class="">
+                                    <img src="http://cdn.mauyjesy.com/timeline/13.12-3er-viaje-misionero-juntos.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="timeline-year"><span>2014</span></div>
+                    <div class="column six heart right">
+                        <div class="box pattern">
+                            <span class="date">Abril</span>
+                            <h2>Amor de tres</h2>
+                            <div class="box-content">
+                                <div class="">
+                                    <img src="http://cdn.mauyjesy.com/timeline/14.4-amor-de-3.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column six heart left movetop">
+                        <div class="box pattern">
+                            <span class="date">Junio</span>
+                            <h2>30 años de Mau</h2>
+                            <div class="box-content">
+                                <div class="">
+                                    <img src="http://cdn.mauyjesy.com/timeline/14.6-30-anos-de-Mau.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column six heart right">
+                        <div class="box pattern">
+                            <span class="date">Diciembre</span>
+                            <h2>Primera bicicleta de Jesy</h2>
+                            <div class="box-content">
+                                <div class="">
+                                    <img src="http://cdn.mauyjesy.com/timeline/14.12-1era-bicicleta-de-Jesy.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="timeline-year"><span>2015</span></div>
+                    <div class="column six heart right">
+                        <div class="box pattern">
+                            <span class="date">Abril</span>
+                            <h2>Compramos el aparta</h2>
+                            <div class="box-content">
+                                <div class="">
+                                    <img src="http://cdn.mauyjesy.com/timeline/15.3-compramos-el-aparta.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column six heart left">
+                        <div class="box pattern">
+                            <span class="date">Abril</span>
+                            <h2>4 años juntos</h2>
+                            <div class="box-content">
+                                <div class="">
+                                    <img src="http://cdn.mauyjesy.com/timeline/15.3-4-anos.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column six heart left">
+                        <div class="box pattern">
+                            <span class="date">Junio</span>
+                            <h2>¡Estamos comprometidos!</h2>
+                            <div class="box-content">
+                                <div class="">
+                                    <img src="http://cdn.mauyjesy.com/timeline/15.6-estamos-comprometidos.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column six heart right movetop">
+                        <div class="box pattern">
+                            <span class="date">Setiembre</span>
+                            <h2>Ya con planes de boda</h2>
+                            <div class="box-content">
+                                <div class="">
+                                    <img src="http://cdn.mauyjesy.com/timeline/15.9-ya-con-planes-de-boda.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="timeline-year"><span>2016</span></div>
+                    <div class="column six heart right">
+                        <div class="box pattern">
+                            <span class="date">Enero</span>
+                            <h2>Amor de cinco</h2>
+                            <div class="box-content">
+                                <div class="">
+                                    <img src="http://cdn.mauyjesy.com/timeline/16.1-amor-de-5.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="timeline-button">Continuará</div>
+                </div>
+            </div>
+        </section>
+        <!-- #Loveline Section Ends -->
+        <!-- Parallax Section -->
+        <section class="parallax" data-type="parallax">
+            <div class="overlay"></div>
+            <div class="container">
+                <h2 class="quote">Te esperamos para que celebrés con nosotros nuestra siguiente etapa:<br> ¡el inicio de la familia Peraza Flores!</h2>
+            </div>
+        </section>
+        <!-- #Parallax Section Ends -->
+        <!-- #Map Section -->
+        <section id="map-section">
+            <div class="container">
+                <div id="map-pins">
+                    <ul>
+                        <li class="wedding">La Casona de Pedregal</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="map"></div>
+        </section>
+        <!-- #Map Section Ends -->
+        <!-- Small Gallery Section -->
+        <section id="wedding-gallery" class="pattern">
+            <header class="section-header">
+                <h3 class="section-title">Fotos</h3>
+            </header>
+            <div class="container" style="display:none;">
+                <div class="row">
+                    <ul id="gallery-filter">
+                        <li class="active"><a id="fotosTodas" href="#" data-filter="*">Todas</a>
+                        </li>
+                        <li ><a href="#" data-filter=".wedding">Sesión</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="gallery-wrapper">
+                <div class="block wedding">
+                    <div class="image-holder">
+                        <img src="http://cdn.mauyjesy.com/album/B&N-0007.jpg" alt="image">
+                    </div>
+                    <a href="http://cdn.mauyjesy.com/album/B&N-0007.jpg" class="portfolio-hover"></a>
+                </div>
+                <div class="block wedding">
+                    <div class="image-holder">
+                        <img src="http://cdn.mauyjesy.com/album/B&N-0044.jpg" alt="image">
+                    </div>
+                    <a href="http://cdn.mauyjesy.com/album/B&N-0044.jpg" class="portfolio-hover"></a>
+                </div>
+                <div class="block wedding">
+                    <div class="image-holder">
+                        <img src="http://cdn.mauyjesy.com/album/B&N-0049.jpg" alt="image">
+                    </div>
+                    <a href="http://cdn.mauyjesy.com/album/B&N-0049.jpg" class="portfolio-hover"></a>
+                </div>
+                <div class="block wedding">
+                    <div class="image-holder">
+                        <img src="http://cdn.mauyjesy.com/album/B&N-0055.jpg" alt="image">
+                    </div>
+                    <a href="http://cdn.mauyjesy.com/album/B&N-0055.jpg" class="portfolio-hover"></a>
+                </div>
+            </div>
+        </section>
+        <!-- #Small Gallery Section Ends -->
+        <!-- Gift Registry Section -->
+        <section id="gift-registry" class="pattern">
+            <header class="section-header">
+                <h3 class="section-title">Regalos</h3>
+                <p class="section-tagline">El mejor regalo que podemos recibir es que nos acompañés en la boda, pero si querés darnos algún presente, te agradecemos lo hagás en efectivo.</p>
+            </header>
+            <div class="container">
+                <ul class="small-box corner">
+                    <li>
+                        <img class="img-rounded" src="http://cdn.mauyjesy.com/gifts/cajita-sobres.jpg" alt="">
+                        <div class="corners-topleft"></div>
+                        <div class="corners-bottomleft"></div>
+                        <div class="corners-topright"></div>
+                        <div class="corners-bottomright"></div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- #Gift Registry Section Ends -->
+        <!-- Guestbook Section -->
+        <section id="guestbook">
+            <header class="section-header">
+                <h3 class="section-title">Decínos algo</h3>
+                <p class="section-tagline">Escribí algo para nosotros</p>
+            </header>
+            <div class="form color">
+                <header class="section-header">
+                    <h3>Escribí aquí tu mensaje para nosotros</h3>
+                </header>
+                <div class="container smaller">
+                    <div class="row">
+                        <form action="guestbook.php" method="POST" autocomplete="off" class="actionform">
+                            <div class="column six">
+                                <label for="name">Nombre</label>
+                                <input type="text" id="name" name="name">
+                            </div>
+                            <div class="column six">
+                                <label for="email">Email</label>
+                                <input type="text" id="email" name="email">
+                            </div>
+                            <div class="column twelve">
+                                <label for="comment">Mensaje</label>
+                                <textarea name="comment" cols="30" rows="10"></textarea>
+                            </div>
+                            <div class="clearfix"></div>
+                            <input type="hidden" name="submit">
+                            <input type="submit" class="color" value="Enviar mensaje &rarr;">
+                            <div class="clearfix"></div>
+                            <div class="notification"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- #Guestbook Section Ends -->
+        <!-- Instagram Section -->
+        <section id="instagram-section" class="pattern">
+            <header class="section-header">
+                <h3 class="section-title">Instagram</h3>
+                <p class="section-tagline">Copiá el hashtag y compartí tu experiencia de la boda :)</p>
+            </header>
+            <span class="hash">#bodamauyjesy</span>
+            <div class="container">
+                <div class="instagram-images">
+                </div>
+            </div>
+            <div class="load-more">
+                <a href="#" class="button">Cargar más</a>
+            </div>
+        </section>
+        <!-- #Instagram Section Ends -->
+        <!-- Contact Section -->
+        <section id="rsvp" class="bgcolor rsvp-container">
+            <ng-view autoscroll="true"></ng-view>
+        </section>
+        <!-- #Contact Section -->
+        <!-- Footer Section -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="column four copyright">Sitio web por <a href="http://www.webondigital.com" target="_blank">Say-Yes CR</a></div>
+                    <div class="column four logo">M<span>&</span>J</div>
+                    <div class="column four info">«Todo el que confíe en él no será jamás defraudado.»<i> Romanos 10:11b</i></div>
+                </div>
+            </div>
+        </footer>
+        <!-- / Footer Section Ends -->
+    </section>
+    <!-- JavaScript Files - These ones are in footer
+    ================================================== -->
+    <!-- <script src="js/device.min.js"></script>
+    <script src="js/imagesloaded.pkgd.js"></script>
+    <script src="js/SmoothScroll.js"></script>
+    <script src="js/isotope.js"></script>
+    <script src="js/jquery.isotope.sloppy-masonry.min.js"></script>
+    <script src="js/jquery.parallax.min.js"></script>
+    <script src="js/jquery.scrollTo.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.mb.YTPlayer.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/retina.min.js"></script>
+    <script src="js/jquery.soc-share.js"></script> -->
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    
+    <!-- <script src="js/custom.js"></script> -->
+    <script>
+    var markers = [
+        ['La Casona de Pedregal, San Antonio de Belén', 9.977156, -84.179493, 'wedding', 'Acá nos casamos']
+        //     ,
+        //     ['Name of Place, Paris', 48.8588589, 2.3470599, 'restaurant','Insert Some Demo Text Here'],
+        //     ['Name of Place, Paris', 48.8656488, 2.3709794, 'airport','Insert Some Demo Text Here'],
+        //     ['Name of Place, Paris', 48.8777566, 2.3369444, 'attraction','Insert Some Demo Text Here'],
+        //     ['Name of Place, Paris', 48.8589917, 2.3106827, 'bachelor','Insert Some Demo Text Here'],
+        //     ['Name of Place, Paris', 48.8785204, 2.3201107, 'bachelorette','Insert Some Demo Text Here'],
+        //     ['Name of Place, Paris', 48.8845034, 2.3599466, 'shopping','Insert Some Demo Text Here'],
+        //     ['Name of Place, Paris', 48.8894376, 2.3495625, 'special','Insert Some Demo Text Here'],
+        //     ['Name of Place, Paris', 48.8888826, 2.3477870, 'wedding','Insert Some Demo Text Here'],
+        //     ['Name of Place, Paris', 48.8922916, 2.3407284, 'weddingParty','Insert Some Demo Text Here']
+    ];
+    </script>
+    <script type="text/javascript">
+        setTimeout(function(){
+          $("#fotosTodas").click();
+        }, 2000);
+    </script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-45298262-11', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+
+</html>

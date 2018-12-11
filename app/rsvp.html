@@ -1,0 +1,49 @@
+<div>
+    <div class="container smaller">
+        <div class="row">
+            <h3>¡Hola {{rsvpCtrl.nombre}}!</h3>
+            <div class="notification"></div>
+            <div class="column twelve confirmation">
+                <p>Ahora seleccioná a las personas que irán con vos y listo, nosotros recibiremos inmediatamente las confirmaciones y podés cambiarlo en cualquier momento antes del 7 de agosto de 2016.</p>
+                <table class="table table-responsive">
+                    <tbody>
+                        <tr ng-repeat="invitado in rsvpCtrl.invitados">
+                            <td>
+                                <div class="nombreInvitado">
+                                    {{ invitado.nombre }}
+                                </div>
+                            </td>
+                            <td>
+                                <div class="btn-group">
+                                    <label class="btn unselectedRsvpBtn" ng-model="invitado.status" uib-btn-radio="'confirmado'" ng-change="rsvpCtrl.actualizarStatus($index)">
+                                        {{invitado.nombre == rsvpCtrl.nombre ? rsvpCtrl.mensajes.primeraPersona[0] : rsvpCtrl.mensajes.terceraPersona[0]}}
+                                    </label>
+                                    <label class="btn unselectedRsvpBtn" ng-model="invitado.status" uib-btn-radio="'pendiente'" ng-change="rsvpCtrl.actualizarStatus($index)">
+                                        {{invitado.nombre == rsvpCtrl.nombre ? rsvpCtrl.mensajes.primeraPersona[1] : rsvpCtrl.mensajes.terceraPersona[1]}}
+                                    </label>
+                                    <label class="btn unselectedRsvpBtn" ng-model="invitado.status" uib-btn-radio="'rechazado'" ng-change="rsvpCtrl.actualizarStatus($index)">
+                                        {{invitado.nombre == rsvpCtrl.nombre ? rsvpCtrl.mensajes.primeraPersona[2] : rsvpCtrl.mensajes.terceraPersona[2]}}
+                                    </label>
+                                    <!-- <label class="btn unselectedRsvpBtn" ng-model="rsvpCtrl.status[$index]" uib-btn-radio="'confirmado'" ng-change="rsvpCtrl.actualizarStatus(invitado, invitado.invitadoId, rsvpCtrl.status[$index], $index)">
+                                        {{invitado.nombre == rsvpCtrl.nombre ? rsvpCtrl.mensajes.primeraPersona[0] : rsvpCtrl.mensajes.terceraPersona[0]}}
+                                    </label>
+                                    <label class="btn unselectedRsvpBtn" ng-model="rsvpCtrl.status[$index]" uib-btn-radio="'pendiente'" ng-change="rsvpCtrl.actualizarStatus(invitado, invitado.invitadoId, rsvpCtrl.status[$index], $index)">
+                                        {{invitado.nombre == rsvpCtrl.nombre ? rsvpCtrl.mensajes.primeraPersona[1] : rsvpCtrl.mensajes.terceraPersona[1]}}
+                                    </label>
+                                    <label class="btn unselectedRsvpBtn" ng-model="rsvpCtrl.status[$index]" uib-btn-radio="'rechazado'" ng-change="rsvpCtrl.actualizarStatus(invitado, invitado.invitadoId, rsvpCtrl.status[$index], $index)">
+                                        {{invitado.nombre == rsvpCtrl.nombre ? rsvpCtrl.mensajes.primeraPersona[2] : rsvpCtrl.mensajes.terceraPersona[2]}}
+                                    </label> -->
+                                </div>
+                            </td>
+                            <td>
+                                <span class="label label-success" ng-show="rsvpCtrl.confirmadoLabel[$index]">¡Guardado!</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="clearfix"></div>
+            <button ng-click="rsvpCtrl.salir()" class="btn btn-danger pull-right">Salir</button>
+        </div>
+    </div>
+</div>

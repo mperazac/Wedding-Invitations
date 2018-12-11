@@ -1,0 +1,77 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <uib-tabset active="active">
+                <uib-tab index="0" heading="Asistencia confirmada">
+                    <h2>Asistencia confirmada</h2>
+                    <table id="confirmadosTable" class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Email</th>
+                                <th>Teléfono</th>
+                                <th>Id del grupo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="confirmado in checklistCtrl.confirmados">
+                                <td>{{ confirmado.nombre }}</td>
+                                <td>{{ confirmado.email }}</td>
+                                <td>{{ confirmado.telefono }}</td>
+                                <td>{{ confirmado.grupoId }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button ng-click="checklistCtrl.exportarTabla.exportExcel('#confirmadosTable')" class="btn btn-primary">Excel</button>
+                    <button ng-click="checklistCtrl.exportarTabla.exportPDF('#confirmadosTable')" class="btn btn-primary">PDF</button>
+                </uib-tab>
+                <uib-tab index="1" heading="No asistirán">
+                    <h2>No asistirán</h2>
+                    <table id="rechazadosTable" class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Email</th>
+                                <th>Teléfono</th>
+                                <th>Id del grupo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="rechazado in checklistCtrl.rechazados">
+                                <td>{{ rechazado.nombre }}</td>
+                                <td>{{ rechazado.email }}</td>
+                                <td>{{ rechazado.telefono }}</td>
+                                <td>{{ rechazado.grupoId }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button ng-click="checklistCtrl.exportarTabla.exportExcel('#rechazadosTable')" class="btn btn-primary">Excel</button>
+                    <button ng-click="checklistCtrl.exportarTabla.exportPDF('#rechazadosTable')" class="btn btn-primary">PDF</button>
+                </uib-tab>
+                <uib-tab index="2" heading="Pendientes de confirmar">
+                    <h2>Pendientes de confirmar</h2>
+                    <table id="pendientesTable" class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Email</th>
+                                <th>Teléfono</th>
+                                <th>Id del grupo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="pendiente in checklistCtrl.pendientes">
+                                <td>{{ pendiente.nombre }}</td>
+                                <td>{{ pendiente.email }}</td>
+                                <td>{{ pendiente.telefono }}</td>
+                                <td>{{ pendiente.grupoId }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button ng-click="checklistCtrl.exportarTabla.exportExcel('#pendientesTable')" class="btn btn-primary">Excel</button>
+                    <button ng-click="checklistCtrl.exportarTabla.exportPDF('#pendientesTable')" class="btn btn-primary">PDF</button>
+                </uib-tab>
+            </uib-tabset>
+        </div>
+    </div>
+</div>

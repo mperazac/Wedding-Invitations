@@ -1,0 +1,22 @@
+<div class="container" id="inicio">
+    <div class="row">
+        <h2>Resumen de invitados</h2>
+        <div class="col-xs-12 col-md-6">
+            <canvas id="doughnut" class="chart chart-doughnut" chart-data="resumenCtrl.data" chart-labels="resumenCtrl.labels" >
+            </canvas>
+        </div>
+        <div class="col-xs-12 col-md-6">
+            <div class="block-confirmaciones">
+                <div class="txt-confirmados">
+                    <h3>Invitados confirmados: {{resumenCtrl.totalInvitadosConfirmados}}</h3>
+                </div>
+                <div class="txt-rechazados">
+                    <h3>Invitados rechazados: {{resumenCtrl.totalInvitadosRechazados}}</h3>
+                </div>
+                <div class="txt-pendientes">
+                    <h3>Invitados pendientes: {{resumenCtrl.totalInvitadosPendientes}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

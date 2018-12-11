@@ -1,0 +1,26 @@
+<div class="container subir-lista">
+    <div class="row">
+        <h2>Nuevos usuarios</h2>
+        <legend>Subir archivo</legend>
+        <input type="file" fileread="subirlistaCtrl.xlf" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" />
+        <button type="button" class="btn btn-success btn-s btn-subir" ng-click="subirlistaCtrl.subirNuevosUsuarios()">
+            <span class="glyphicon glyphicon-upload"></span> Subir
+        </button>
+    </div>
+    <div class="row" ng-show="subirlistaCtrl.showProgressBar">
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="{{subirlistaCtrl.uploadProgress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{subirlistaCtrl.uploadProgress}}%">
+                {{subirlistaCtrl.uploadProgress}}% Completado
+            </div>
+        </div>
+    </div>
+    <div class="row" ng-show="subirlistaCtrl.showProgressBar">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div ng-repeat="log in subirlistaCtrl.logs">
+                    <p class={{log.tipo}}>{{log.msj}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

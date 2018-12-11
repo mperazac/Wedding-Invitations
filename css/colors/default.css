@@ -1,0 +1,117 @@
+h1, h2, h3, h4, h5, h6 {
+    color: #007F00;
+}
+a {
+    color: #007F00;
+}
+a:hover, a:active {
+    color: #007F00;
+}.mae{}
+#page-content blockquote {
+    border-left: 3px solid #007F00;
+}
+.bgcolor {
+    background-color: #007F00;
+}
+span.fill {
+    background-color: #007F00;
+}
+a.button.fill {
+    background: #007F00;
+}
+.timeline .column.heart:after {
+    color: #007F00;
+}
+.timeline-year span {
+    background-color: #007F00;
+}
+.loaderOverlay i {
+    color: #007F00;
+}
+#logo {
+    color: #007F00;
+}
+#main-menu nav#navigation a:hover, #main-menu nav#navigation a.active {
+    color: #007F00;
+}
+#navigation-dotted ul li a:before{
+    background: #007F00;
+}
+#navigation-dotted ul li a span {
+    background: #007F00;
+}
+#navigation-dotted ul li a span:after {
+    border-color: transparent transparent transparent #007F00;
+}
+#invitation a {
+    background: #007F00;
+}
+.social ul li a:hover {
+    color: #007F00;
+}
+.box a:hover {
+    color: #007F00;
+}
+.box .date:before {
+    color: #007F00;
+}
+#twitter .follow:hover {
+    color: #007F00;
+}
+.small-box .amount {
+    color: #007F00;
+}
+.small-box .donate:hover {
+    color: #007F00;
+}
+#instagram-section .hash {
+    color: #007F00;
+}
+.form input[type="submit"] {
+    color: #007F00;
+}
+.form input[type="submit"].color {
+    background-color: #007F00;
+}
+.form input[type="submit"].color:hover {
+    background-color: #007F00;
+}
+.form .column:after {
+    color: #007F00;
+}
+footer .logo span {
+    color: #007F00;
+}
+#back-home {
+    background: #007F00;
+}
+.prev:hover:before,.next:hover:after {
+    color: #007F00;
+}
+.content p:first-child:first-letter {
+    color: #007F00;
+}
+#comments h3.section-title span {
+    color: #007F00;
+}
+#back-to-top {
+    background: #007F00;
+}
+#menu-toggle {
+    background: #007F00;
+}
+#menu-toggle:before {
+    background: #007F00;
+}
+.pattern, #wedding-events .timeline .column.heart:after {
+    background-color: #FFFFF0;
+}
+.box.pattern {
+    background-color: #FFFFF0;
+}
+#gallery-wrapper .block .portfolio-hover, #gallery-wrapper .block .video-hover {
+    background: rgba(0, 127, 0, 0.5);
+}
+.overlay {
+    background: rgba(144, 123, 123, 0.45);
+}

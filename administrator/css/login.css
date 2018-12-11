@@ -1,0 +1,67 @@
+.panel-heading {
+    padding: 5px 15px;
+}
+
+.panel-footer {
+    padding: 1px 15px;
+    color: #A0A0A0;
+}
+
+.profile-img {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.btn-salir {
+    margin-top: 8px;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+.subir-lista .btn-subir,
+.subir-lista .progress {
+    margin-top: 23px;
+}
+
+#inicio .txt-confirmados h3 {
+    color: #5cb85c;
+}
+
+#inicio .txt-rechazados h3 {
+    color: #F7464A;
+}
+
+#inicio .txt-pendientes h3 {
+    color: #656060;
+}
+
+#inicio h2 {
+	margin-bottom: 45px;
+}
+
+.block-confirmaciones {
+    margin-top: 45px;
+}
+
+@media (max-width: 980px) {
+    .block-confirmaciones {
+        text-align: center;
+    }
+}
+
+.bueno{
+    color: #333;
+}
+
+.info{
+    color: orange;
+}
+
+.error {
+    color: red;
+}

@@ -1,0 +1,136 @@
+<div class="container">
+    <div class="row">
+        <h2>Todos los invitados</h2>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Teléfono</th>
+                        <th>Id del grupo</th>
+                        <th>Administrador</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="invitado in listaCtrl.allInvitados">
+                        <td>
+                            <input type="text" name="nombre" value="{{ invitado.nombre }}" ng-disabled="listaCtrl.disableInput[$index]" ng-model="invitado.nombre">
+                        </td>
+                        <td>
+                            <input type="email" name="email" value="{{ invitado.email }}" ng-disabled="listaCtrl.disableInput[$index]" ng-model="invitado.email">
+                        </td>
+                        <td>
+                            <input type="tel" name="telefono" value="{{ invitado.telefono }}" ng-disabled="listaCtrl.disableInput[$index]" ng-model="invitado.telefono">
+                        </td>
+                        <td>
+                            <input type="number" string-to-number name="grupoId" value="{{ invitado.grupoId }}" ng-disabled="listaCtrl.disableInput[$index]" ng-model="invitado.grupoId">
+                        </td>
+                        <td>
+                            <select ng-model="invitado.isAdmin" ng-options="o.v as o.n for o in [{ n: 'No', v: false }, { n: 'Sí', v: true }]" ng-disabled="listaCtrl.disableInput[$index]">
+                            </select>
+                        </td>
+                        <td>
+                            <select ng-model="invitado.status" ng-disabled="listaCtrl.disableInput[$index]">
+                                <option value="pendiente">Pendiente</option>
+                                <option value="confirmado">Confirmado</option>
+                                <option value="rechazado">Rechazado</option>
+                            </select>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-primary" ng-click="listaCtrl.editar($index)" ng-show="listaCtrl.hideEditDeleteBtn[$index]">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                            </button>
+                            <button type="button" class="btn btn-danger" ng-click="listaCtrl.borrar($index)" ng-show="listaCtrl.hideEditDeleteBtn[$index]">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                            <button type="submit" class="btn btn-success" ng-click="listaCtrl.guardar($index)" ng-show="listaCtrl.hideSaveCancelBtn[$index]">
+                                <span class="glyphicon glyphicon-floppy-disk"></span> Guardar
+                            </button>
+                            <button type="button" class="btn btn-default" ng-click="listaCtrl.cancelar($index)" ng-show="listaCtrl.hideSaveCancelBtn[$index]">
+                                Cancelar
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row well" ng-show="listaCtrl.mostrarNuevoInvitado">
+        <div class="col-xs-12 col-sm-2">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" ng-model="listaCtrl.nuevoInvitado.nombre">
+        </div>
+        <div class="col-xs-12 col-sm-2">
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="@" ng-model="listaCtrl.nuevoInvitado.email">
+        </div>
+        <div class="col-xs-12 col-sm-2">
+            <label for="phone">Teléfono</label>
+            <input type="tel" name="phone" ng-model="listaCtrl.nuevoInvitado.telefono">
+        </div>
+        <div class="col-xs-12 col-sm-2">
+            <label for="Password">Contraseña</label>
+            <input type="text" name="password" ng-model="listaCtrl.nuevoInvitado.password">
+        </div>
+        <div class="col-xs-12 col-sm-2">
+            <label for="grupoId">Id del grupo</label>
+            <input type="string" name="grupoId" ng-model="listaCtrl.nuevoInvitado.grupoId">
+        </div>
+        <div class="col-xs-12 col-sm-2">
+            <label for="isAdmin">Administrador</label>
+            <br>
+            <select ng-model="listaCtrl.nuevoInvitado.isAdmin">
+                <option value="No" selected>No</option>
+                <option value="Sí">Sí</option>
+            </select>
+        </div>
+        <div class="col-xs-12 col-sm-2">
+            <label for="status">Status</label>
+            <br>
+            <select ng-model="listaCtrl.nuevoInvitado.status">
+                <option value="pendiente" selected>Pendiente</option>
+                <option value="confirmado">Confirmado</option>
+                <option value="rechazado">Rechazado</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <button ng-click="listaCtrl.agregarInvitado()" class="btn btn-success" ng-show="!listaCtrl.mostrarNuevoInvitado">
+                <span class="glyphicon glyphicon-plus"></span> Agregar Invitado
+            </button>
+            <button ng-click="listaCtrl.borrarTodos()" class="btn btn-danger" ng-show="!listaCtrl.mostrarNuevoInvitado">
+                <span class="glyphicon glyphicon-trash"></span> Borrar todos
+            </button>
+            <button ng-click="listaCtrl.guardarNuevoInvitado()" class="btn btn-success" ng-show="listaCtrl.mostrarNuevoInvitado">
+                <span class="glyphicon glyphicon-floppy-disk"></span> Guardar
+            </button>
+            <button ng-click="listaCtrl.cancelarNuevoInvitado()" class="btn btn-danger" ng-show="listaCtrl.mostrarNuevoInvitado">
+                Cancelar
+            </button>
+        </div>
+    </div>
+</div>
+<!-- <table id="todosTable" class="table table-hover">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Id del grupo</th>
+            <th>Administrador</th>
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="invitado in listaCtrl.allInvitados">
+            <td>{{ invitado.nombre }}</td>
+            <td>{{ invitado.email }}</td>
+            <td>{{ invitado.grupoId }}</td>
+            <td>{{ invitado.isAdmin }}</td>
+            <td>{{ invitado.status }}</td>
+        </tr>
+    </tbody>
+</table>
+ -->
