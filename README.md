@@ -1,5 +1,4 @@
 # Wedding-Invitations
-Website to manage invitations to a wedding.
 
 Uses AngularJS 1.5 and Firebase as the database.
 
